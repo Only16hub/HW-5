@@ -11,19 +11,19 @@ function FromConv(){
     else if(value == "AUD"){fromconversion = document.getElementById("usdfrominput").value * 1.44}
     else if(value == "JPY"){fromconversion = document.getElementById("usdfrominput").value * 131.18}
 
-    document.getElementById("usdfromoutput").value = Math.trunc(fromconversion * 100) / 100;
+    document.getElementById("usdfromoutput").value = fromconversion.toFixed(2);
 }
 
 function ToConv(){
-    var i = document.getElementById("currencypicker");
+    var i = document.getElementById("currencypicker2");
     var value = i.value;
 
-    if(value == "CAD"){toconversion = document.getElementById("usdtoinput").value * 0.75}
-    else if(value == "EUR"){toconversion = document.getElementById("usdtoinput").value * 1.08}
-    else if(value == "AUD"){toconversion = document.getElementById("usdtoinput").value * 0.69}
-    else if(value == "JPY"){toconversion = document.getElementById("usdtoinput").value * 0.0076}
+    if(value == "CAD"){toconversion = document.getElementById("usdtoinput").value / 1.34}
+    else if(value == "EUR"){toconversion = document.getElementById("usdtoinput").value / 0.92}
+    else if(value == "AUD"){toconversion = document.getElementById("usdtoinput").value / 1.44}
+    else if(value == "JPY"){toconversion = document.getElementById("usdtoinput").value / 131.18}
 
-    document.getElementById("usdtooutput").value = Math.trunc(toconversion * 100) / 100;
+    document.getElementById("usdtooutput").value = toconversion.toFixed(2);
 
 }
 
