@@ -14,11 +14,10 @@
 <body>
     <!-- ======================================================================================== -->
     
-    //======================================
     <div data-role="page" id="home">
 
         <!-- header --> 
-        <div data-role="header" data-theme='b'>
+        <div data-role="header" data-theme="b">
             <h2>Currency Converter - Home</h2>
         
             <div data-role="navbar" data-theme='b'>
@@ -29,21 +28,35 @@
                 </ul>
             </div><!-- /navbar -->
         </div>
-        //======================================
-
-        //======================================
+        
         <!-- content -->
-        <div data-role="content" data-theme='e'>
-            Real application function code
-        </div>
-        //======================================
+        <div data-role="content" data-theme='e' class="home_Content">
+            <h2 id="home_header">Welcome to our currency converter</h2>
 
-        //======================================
+            <div class="compare_Currency">
+                <div id="left">
+                    <label for="">You may check The Most Expensive currency</label>
+                    <button type="submit" id="buttonExpensive" onclick="expensiveCurrency()">Expensive Currency</button>
+                    <input type="text" id="inputExpensive">
+                </div>
+                <div id="right">
+                    <label for="">You may check The Cheapest currency</label>
+                    <button type="submit" id="buttonCheap" onclick="cheapCurrency()">Cheap currency</button>
+                    <input type="text" id="inputCheap">
+                </div>
+            </div>
+
+            <div class="show_Currency">
+                <button type="submit" id="buttonAll" onclick="showAll()">Show all</button>
+                <ul id="ulAll"></ul>
+            </div>
+            
+        </div>
+        
           <!-- notes footer --> 
           <div data-role="footer" data-theme='b'>
             <h3>Copyright 2023 by Daniel and Karim</h3>
-        </div>
-        //======================================
+        </div> 
     </div>
    <!-- ======================================================================================== -->
 
@@ -69,9 +82,10 @@
 
         <!-- =================================== -->
         <!-- content -->
-        <div data-role="content" data-theme='e'>
+        <div data-role="content" class="from_content" data-theme='e'>
+            <div class="from_wrapper">
             <h3>Amount in USD:</h3>
-            <input type="text" id="usdfrominput" name="usdfrominput"><br><br>
+            <input type="text" id="usdfrominput" name="usdfrominput">
             
             <h3>Select a Currency to Convert to:</h3> 
         <select name="currencypicker" id="currencypicker">
@@ -79,10 +93,11 @@
         <option value="EUR">EUR</option>
         <option value="AUD">AUD</option>
         <option value="JPY">JPY</option>
-        </select><br><br>
+        </select><br>
 
         <button id="fromconvert">Convert</button>
-        <input type="text" id="usdfromoutput" name="usdfromoutput"><br><br>
+        <input type="text" id="usdfromoutput" name="usdfromoutput">
+        </div>
 
 
         </div>
@@ -121,20 +136,22 @@
 
           <!-- =================================== -->
         <!-- content -->
-        <div data-role="content" data-theme='e'>
+        <div data-role="content" class="to_content" data-theme='e'>
+            <div class="to_wrapper">
          <h3>Select a Currency to Convert to USD:</h3> 
         <select name="currencypicker" id="currencypicker2">
         <option value="CAD">CAD</option>
         <option value="EUR">EUR</option>
         <option value="AUD">AUD</option>
         <option value="JPY">JPY</option>
-        </select><br>
+        </select>
 
         <h3>Currency Amount:</h3>
         <input type="text" id="usdtoinput" name="usdtoinput"><br><br>
 
         <button id="toconvert">Convert</button>
         <input type="text" id="usdtooutput" name="usdtooutput"><br><br>
+        </div>
         </div>
            <!-- =================================== -->
 
